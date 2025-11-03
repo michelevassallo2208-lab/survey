@@ -13,9 +13,11 @@ $survey_manageCategories['command'] = isset($_GET['_command']) ? $_GET['_command
 
 	
 if(Session::GetUser('job') == 'Poste'){
-	Template::SetTemplate('basicP');
+        Template::SetTemplate('basicP');
 }elseif(Session::GetUser('job') == 'H3G'){
-	Template::SetTemplate('basic');
+        Template::SetTemplate('basic');
+}elseif(Session::GetUser('job') == 'TeamSystem'){
+        Template::SetTemplate('basic_generic_2024');
 }
 
 if(Session::GetUser('location') == 'aquila'){	

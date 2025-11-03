@@ -28,9 +28,9 @@ if (Session::UserHasOneOfProfilesIn('1,2,6') || (@$filter['command']=='list') ||
 	$filter['fields']['label']->label = 'Testo Domanda';
 	$filter['sheet']->addField($filter['fields']['label']);
 	
-	$filter['fields']['job'] = new DropDownField('job');
-	$filter['fields']['job']->label = 'Commessa';
-	$filter['fields']['job']->options = 'H3G;Poste;Sogei';
+        $filter['fields']['job'] = new DropDownField('job');
+        $filter['fields']['job']->label = 'Commessa';
+        $filter['fields']['job']->options = 'H3G;Poste;Sogei;TeamSystem';
 	if($location == 'aquila'){
 		$filter['fields']['job']->options = 'H3G';
 	}

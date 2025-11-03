@@ -68,14 +68,14 @@ if (Session::UserHasOneOfProfilesIn('1,2,6') || (@$filter['command']=='list') ||
 	$filter['sheet']->addField($filter['fields']['typeId']);
 	
 	
-	$filter['fields']['job'] = new DropDownField('job');
-	$filter['fields']['job']->label = 'Commessa';
-	$filter['fields']['job']->options = 'H3G;Poste;Sogei';
-	if($location == 'aquila'){
-		$filter['fields']['job']->options = 'H3G';
-	}else if($location == 'settingiano'){
-		$filter['fields']['job']->options = 'Poste';
-	}
+        $filter['fields']['job'] = new DropDownField('job');
+        $filter['fields']['job']->label = 'Commessa';
+        $filter['fields']['job']->options = 'H3G;Poste;Sogei;TeamSystem';
+        if($location == 'aquila'){
+                $filter['fields']['job']->options = 'H3G';
+        }else if($location == 'settingiano'){
+                $filter['fields']['job']->options = 'Poste;TeamSystem';
+        }
 	$filter['fields']['job']->usesNoSelection = true;
 	$filter['sheet']->addField($filter['fields']['job']);
 	
